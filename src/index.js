@@ -26,8 +26,7 @@ const Application = () => {
   const onInput = (event) => setName(event.target.value);
 
   const reset = () => {
-    console.log("reset");
-    // your code here
+    setName('');
   };
 
   return (
