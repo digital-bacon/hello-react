@@ -33,7 +33,14 @@ const Application = () => {
     <main>
       <Input value={name} handleInput={onInput} />
       <Button reset={reset}>I am a button</Button>
-      <h1>Hello {name}</h1>
+      <>
+      { name.length === 0 && <h1>Tell us your name...</h1> }
+      { name.length === 1 && <h1>You're named after a letter?</h1> }
+      { name.length > 1 && <h1>Hello {name}</h1> }
+      { name.length === 1 && <p>Either you're being dishonest, or your parents are really eccentric.</p> }
+      { name.length === 2 && <p>Whoooo two letters. Sliding closer to normal now! Can you tell me more?</p> }
+      { name.length === 3 && <p>😀</p> }
+      </>
     </main>
   );
 };
