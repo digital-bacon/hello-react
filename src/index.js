@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+const Input = (props) => {
+  return (
+    <input className='Input' />
+  )
+};
+
 const Button = (props) => {
   const { reset } = props;
   const handleClick = () => reset();
@@ -22,6 +28,7 @@ const Application = () => {
 
   return (
     <main>
+      <Input />
       <Button reset={reset}>I am a button</Button>
       <h1>Hello {name}</h1>
     </main>
